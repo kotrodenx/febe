@@ -7,11 +7,6 @@ define('FEBE_TOPANELBTN',2);
 define('FEBE_LOGOUTBTN',3);
 define('FEBE_ADDPOSSIBLEBTN',4);
 
-define('FEBE_ADDTUTTOTRAPANI',0);
-define('FEBE_ADDNETTECONOMY',1);
-define('FEBE_ADDBLOGSFERA',2);
-define('FEBE_ADDMAGAZINE',3);
-
 define('FEBE_PANEL_URL','/wp-admin');
 
 
