@@ -1,0 +1,219 @@
+/**
+ * 
+ * CSS TABLE:
+ * 
+ * 1 - BASE
+ * 2 - CLASS SHOW
+ * 3 - HOVER
+ * 
+ */
+
+/*
+ * 1 - BASE
+ */
+
+#febe {
+
+	position: fixed;
+	bottom: 10px;
+	right: -100px;
+	z-index: 999;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    border-bottom: 1px solid #31353d;
+    border-right: 1px solid #31353d;
+    transition: right 0.5s;
+}
+
+#febe .flipFlop {
+	
+    border-left: 15px solid #31353d;
+    border-bottom: 15px solid transparent;
+    transition: border-bottom, border-left, 0.2s, 0.2s;
+    position: fixed;
+    bottom: 0px;
+    right: 0;
+    background-color: transparent;
+    z-index: 2;
+    
+}
+
+#febe ul li {
+	float: right;
+	clear: right;
+    margin-top: 12px;
+}
+
+.febeEye { 
+	
+	position: relative; /* non ricordo se serve veramente */
+	
+	color: #31353d;
+	width: 65px; 
+	height: 65px; 
+	border-radius: 50%; 
+	border: 3px solid #fff; 
+	box-shadow: 0 0 0 5px #333; 
+	display: block;
+}
+
+.febeEye span {	position: absolute; 
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 20px;
+    transition: top 0.3s;}
+
+.febeEye .fa {
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 15px;
+    transition: top 0.3s;
+}
+
+.febeEye .fa .admin-curtains {
+    height: 20px;
+    top: 21px;
+    left: 13px;
+    right: 13px;
+    overflow: hidden;
+    transition: top 0.3s;
+}
+
+.febeEye .fa .admin-curtains .admin-actor {
+	top: -3px;
+	font-family: Sans-serif;
+    font-size: 50%;
+    right: -80px;
+    transition: right 0.2s;
+
+}
+
+.lastItem .febeEye { width: 75px; height: 75px; }
+.lastItem .febeEye .fa { top: 20px; }
+
+.febeCloud { 
+	width: 150px;
+    height: 75px;
+    border: 3px solid #31353d;
+    border-radius: 50%;
+    position: fixed;
+	bottom: 40px;
+	right: 110px;
+    text-align: center;
+    background-color: lightgrey;
+    color: #31353d;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.febeCloud::after {
+	content: '';
+    border-left: 15px solid transparent;
+    border-bottom: 15px solid #31353d;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: rotate(-125deg);
+}
+
+/*
+ * 2 - SHOW CLASSES 
+ */
+
+#febe.show { right: 10px; }
+
+#febe.show .flipFlop { border-bottom: 15px solid #31353d; border-left: 15px solid transparent; }
+
+li.talks .febeCloud { opacity: 1; transition-delay: 0.2s}
+
+
+/*
+ * 3 - HOVER
+ */
+
+.febeEye:hover .fa { top: 6px; }
+
+.febeEye:hover .fa .admin-curtains { top: 30px; }
+.lastItem .febeEye:hover .fa .admin-curtains { top: 35px; }
+
+.febeEye:hover .fa  .admin-curtains .admin-actor { right: 0; }
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * 4 - TO SISTEMARE!!!
+ */
+.febeAbsolute {
+	position: absolute;
+	top: 0;
+    right: -450px;
+		width: 400px;
+		height: 65px;
+    z-index: -1;
+    transition: right 0.5s;
+    margin-right: 70px;
+	width: 345px;
+	height: 75px;
+	border-bottom: 1px solid black;
+}
+.febeAdd {position: relative;}
+.febeAdd .febeAbsolute ul {position: absolute; top: 0; right: 0;}
+#febe .febeAdd .febeAbsolute ul li {display: inline-block; float: left; margin-top: 0; margin-right: 20px;}
+
+#febe.show .febeAdd.febeOpen .febeAbsolute {right: 0;}
+
+
+
+
+
+/* VEDIAMO DOPO */
+.admin-buttons ul li.small-button .admin-clicks span {
+	top: 10px;
+}
+
+.admin-buttons li.admin-lists {
+	position: relative;
+}
+
+.admin-buttons li.admin-lists a {
+	z-index: 1;
+
+}
+.admin-buttons .admin-lists .admin-list {
+	
+    position: fixed;
+    right: -130px;
+    transition: right 0.5s;
+}
+
+.admin-buttons .admin-lists .admin-list li {
+	clear: unset;
+	margin-right: 10px; 
+}
+
+.admin-buttons .admin-lists .admin-list li a {
+	width: 35px;
+	height: 35px;
+	top: -50px;
+}
+
+.admin-buttons .admin-lists .admin-list li a span {
+	top: 5px;
+	font-size: 150%;
+}
+
+
+.admin-buttons.show .admin-lists .admin-list.show  { right: 80px; }
+
+
